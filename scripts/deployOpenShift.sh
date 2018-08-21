@@ -491,9 +491,6 @@ fi
 echo $(date) " - Setting Masters to non-schedulable"
 runuser -l $SUDOUSER -c "ansible-playbook -f 10 ~/openshift-container-platform-playbooks/reset-masters-non-schedulable.yaml"
 
-# Delete yaml files
-echo $(date) " - Deleting unecessary files"
-rm -rf /home/${SUDOUSER}/openshift-container-platform-playbooks
 
 echo $(date) " - Sleep for 30"
 sleep 30
